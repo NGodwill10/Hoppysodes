@@ -1,0 +1,224 @@
+/* CSS for the Explore page */
+/* Import the common styles from style.css */
+
+/* Style the canvas */
+.canvas {
+    /* Copy the styles from home.css for the canvas */
+    /* margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center; */
+    margin-top: 100px;
+    overflow-x: hidden; /* No horizontal scroll */
+    flex-wrap: wrap; /* Wrap content */
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Style the search bar */
+.search-bar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    width: 300px; /* Adjust the width as needed */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #5bb450;
+    border-radius: 25px;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: #5bb450;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style the Explore section */
+.explore-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style the Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 400px)); /* 3 columns, min width 300px, max width 400px */
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the individual cards */
+.card {
+    /* background-color: rgba(0,0,0,0.3);
+    border-radius: 8px; */
+    height: 250px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    overflow: hidden; /* Hide overflow for the title */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Add an ellipsis for long titles */
+}
+
+.card p {
+    max-height: 150px;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden; /* Hide overflow for the description */
+}
+
+.card img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+/* .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 2px #5bb450;
+} */
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* .card-content {
+    padding: 20px;
+    color: gray;
+} */
+
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.instruction-text{
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* pop up panel */
+.popup-panel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#popupPanel{
+    display: none;
+    overflow: scroll;
+}
+
+.popup-content {
+    margin: auto;
+    margin-top: 180px;
+    background: white;
+    width: 80%;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Add styles for your form fields and buttons */
+.popup-form {
+    display: flex;
+    flex-direction: column; /* Align form fields vertically */
+    align-items: center;
+}
+
+.popup-form input{
+    text-align: center;
+    border-color: none;
+    color: #5bb450;
+    font-size: large;
+    font-weight: bold;
+    border-width: 0px;
+}
+
+.popup-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.popup-buttons {
+    background-color: #5bb450;
+    width: 100%;
+    border-radius: 5px;
+    height: 50px;
+    display: flex;
+    justify-content: center; /* Align buttons horizontally */
+    margin-top: 20px;
+}
+
+
+
+@media only screen and (max-width: 720px) {
+    .explore-section{
+        margin: auto;
+        padding: 10px;
+    }
+
+    .cards-grid {
+        margin: auto;
+        display: block;
+        width: 100%;
+    }
+
+    .card{
+        margin: auto;
+        margin-bottom: 15px;
+        height: 250px;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 15px;
+    }
+
+    .canvas{
+        width: 100%;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .search-bar {
+        width: 80%;
+        margin: auto;
+    }
+
+    .card:hover {
+    transform: scaleY(1.05);
+    box-shadow: 0px 0px 10px 2px #5bb450;
+    }
+}

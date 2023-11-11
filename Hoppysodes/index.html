@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="styleMain.css">
+    <link id="modeCss" rel="stylesheet" href="styleLight.css">
+    <title>(Blog)</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <!-- Menu button and logo container -->
+        <div class="menu-logo-container">
+            <!-- Menu button -->
+            <button id="menuButton" class="menu-button">&#9776;</button>
+            <!-- Logo -->
+            <div class="logo-mini">
+                <div>
+                    <img id="logoImg" src="../Images/logo.png" alt="Logo">
+                </div>
+            </div>
+        </div>
+    
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+            
+            <!-- sidebar MENUS -->
+            <ul class="menu-items">
+                <li>
+                    <a href="profile.html">
+                        <div class="profile-mini">
+                            <img src="../Images/defaultProfilePic.jpg" alt="Profile Pic">
+                        </div>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html" class="active">
+                        <div class="menu-icon">
+                            <img src="../Images/home(light).png" alt="Home Icon">
+                        </div>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="explore.html">
+                        <div class="menu-icon">
+                            <img src="../Images/compass(light).png" alt="Explore Icon">
+                        </div>
+                        <span>Explore</span>
+                    </a>
+                </li>
+                <li style="visibility:hidden">
+                    <a href="post.html" id="postButton" class="post-button">
+                        <div class="menu-icon">
+                            <img src="../Images/add(light).png" alt="post Icon">
+                        </div>
+                        <span>Post</span>
+                    </a>
+                </li>
+                <li style="margin-top:50px;">
+                    <a href="#" id="lightModeButton" class="light-mode-button">
+                        <img src="../Images/dark.png" alt="Lightmode Icon">
+                    </a>
+                </li>
+            </ul>
+     
+            <button id="logoutbtn" type="submit" class="logout-button">
+                <!-- <button type="submit" id="logoutbtn">Logout</button> -->
+                <span onclick="logout()" type="submit">Logout</span> <!-- Wrap the text in a span element -->
+                    <img src="../Images/logout(light).png" alt="Logout Icon">
+            </button>
+        </div> 
+    </nav>
+
+    <!-- Content container 
+    Individual components eg. Home, Explore, Profile are loaded here-->
+            
+    <div class="content" id="content">
+        <!-- Content will be loaded dynamically here -->
+    </div>
+
+    <!-- main script -->
+    <script src="script.js"></script> <!-- Load script.js first -->
+    <script src="firebase.js" type="module"></script>
+    <script id="dynamicJs" src="" ></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleMain.css">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="post.css">
+    <title id="pageTitle">Post</title>
+</head>
+
+<body>
+    <!-- <h2>Explore</h2> -->
+    <div class="canvas" id="canvas">
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+
+        <!-- Explore Section -->
+        <div class="explore-section">
+            <!-- Cards Grid -->
+            <div class="cards-grid" id="cardsGrid">
+                <!-- Example Card (repeat this for more cards) -->
+                <!-- <div class="card" onclick="OpenEditPannelOnClick(this)"  style="visibility:hidden">
+                    <img src="../Images/example.png" alt="Card Image">
+                    <div class="instruction-text">
+                        <h3 id="cardTitle">Card Title0</h3>
+                        <p>Card Description goes here.</p>
+                    </div>
+                </div> -->
+
+                <!-- ADD Card -->
+                <!-- <div class="card">
+                    <img src="../Images/example.png" alt="Card Image" >
+                    <div class="instruction-text">
+                        <h3 id="cardTitle">Add +</h3>
+                        <p hidden>Card Description goes here.</p>
+                    </div>
+                </div> -->
+
+                <!-- Repeat the card structure for a 3x9 grid -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop up panel -->
+    <div class="popup-panel" id="popupPanel">
+        <div class="popup-content">
+            <h1 style="padding: 20px;">Edit contents</h1>
+            <form class="popup-form">
+                <input type="text" id="seriesTitle" class="popup-input" placeholder="Series Title">
+                <label id="checkSeries" class="check" style="display:none"></label>
+                <input type="text" id="seriesDescription" class="popup-input" placeholder=" series Description">
+                <input type="text" id="epTitle" class="popup-input" placeholder="Episode Title">
+                <input type="number" id="epNo" class="popup-input" placeholder="Episode Number">
+                <textarea id="textContent" class="popup-input" rows="25" placeholder="Content"></textarea>
+                <label id="check" class="check" style="display:none"></label>
+                <div class="popup-buttons">
+                    <button id="saveButton">Save</button>
+                    <button id="resetButton">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

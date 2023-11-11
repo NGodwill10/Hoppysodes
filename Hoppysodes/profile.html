@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleMain.css">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="profile.css">
+    <title id="pageTitle">Profile</title>
+</head>
+
+<body>
+    <!-- Content container -->
+    <div class="canvas" id="content">
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <div class="profile-username" id="usernameText" style="font-size:large"><input type="username" id="username" class="input-field" placeholder="username" readonly></div>
+            <div class="profile-pic">
+                <img src="../Images/defaultProfilePic.jpg" alt="Profile Pic">
+            </div>
+            <div class="profile-info editable" id="emailText"><input type="email" id="email" class="input-field" placeholder="email" readonly></div>
+            <div class="profile-info" id="nameText"><input type="name" id="name" class="input-field" placeholder="name" readonly></div>
+            <div class="profile-info"><span>User ID:</span id="uid"> 12345</div>
+                <hr class="seperation-line">
+            <button id="editProfileButton" class="editProfileButton" onclick="editProfileOnClick()">Edit Profile</button>
+        </div>
+    </div>
+
+    <!-- main script -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

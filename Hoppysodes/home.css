@@ -1,0 +1,33 @@
+/* Style the horizontal scrollbar */
+.sections {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    white-space: nowrap;
+}
+
+/* Update CSS for the parent containers */
+.cards-container-parent {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%; /* Ensure the container takes the full width */
+}
+
+/* Update CSS for the cards container to fit the content */
+.cards-container {
+    display: inline-flex;
+    white-space: nowrap;
+}
+
+.card {
+    width: 400px;
+    height: 250px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 1080px) {
+    .card{
+        width: 300px;
+        height: 187px;
+    }
+}
